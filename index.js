@@ -1,5 +1,5 @@
 const express = require('express');
-const cors = require('cors'); // Importa el módulo 'cors'
+const cors = require('cors'); 
 const nodemailer = require('nodemailer');
 
 const app = express();
@@ -18,11 +18,11 @@ app.post('/enviar-correo', (req, res) => {
     console.log(req.body, 'REQEST')
 
     const { addresse, subject, message } = req.body;
-    const from = addresse; // Puedes establecer el remitente aquí o como desees
+    const from = addresse; 
 
     // Configura el transporter de nodemailer
     const transporter = nodemailer.createTransport({
-        service: 'Gmail', // o cualquier otro proveedor de correo
+        service: 'Gmail',
         auth: {
             user: 'rengav6174@gmail.com',
             pass: 'vsty nobp gbzm kcgu', /* contraseña para aplicaciones segura */
