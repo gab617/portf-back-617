@@ -25,7 +25,7 @@ app.post('/enviar-correo', (req, res) => {
         service: 'Gmail',
         auth: {
             user: 'rengav6174@gmail.com',
-            pass: 'vsty nobp gbzm kcgu', /* contraseña para aplicaciones segura */
+            pass: 'xgle fzsc rgpd qduq', /* contraseña para aplicaciones segura */
         },
     });
 
