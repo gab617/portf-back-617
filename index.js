@@ -1,4 +1,5 @@
 const express = require('express');
+require('dotenv').config();
 const cors = require('cors'); 
 const nodemailer = require('nodemailer');
 
@@ -32,7 +33,7 @@ app.post('/enviar-correo', (req, res) => {
     // Configura los datos del correo electrónico
     const mailOptions = {
         from: from,
-        to: 'rengav6174@gmail.com',
+        to: process.env.EMAIL_USER,
         subject: subject,
         text: message + '\n' + from,
     };
