@@ -24,9 +24,9 @@ app.post('/enviar-correo', (req, res) => {
     const transporter = nodemailer.createTransport({
         service: 'Gmail',
         auth: {
-            user: 'rengav6174@gmail.com',
-            pass: 'xgle fzsc rgpd qduq', /* contraseña para aplicaciones segura */
-        },
+            user: process.env.EMAIL_USER,
+            pass: process.env.EMAIL_PASS
+          }
     });
 
     // Configura los datos del correo electrónico
